@@ -1,0 +1,315 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+}
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: hsl(0, 0%, 98%);
+}
+.header li{
+    list-style-type: none;
+}
+
+.navbar-container{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    gap: 10px;
+}
+.navbar-menu li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px;
+    cursor: pointer;
+    height: 50px;
+    width: 110px;
+    color: hsl(0, 0%, 41%);
+    /* z-index: 50; */
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+.navbar-menu img{
+    cursor: pointer;
+}
+
+.arrow-down{
+    position: relative;
+    left: 0;
+    z-index: 50;
+}
+.arrow-up{
+    display: none;
+    left: 0;
+}
+.arrow-up.active{
+    display: block;
+    /* z-index: 99; */
+
+}
+.arrow-down.inactive{
+    display: none;
+}
+.dropdown01{
+    box-shadow: 0 5px 8px hsl(0, 1%, 30%);
+    border-radius: 8px;
+    position: relative;
+    top: 90px;
+    right: 100px;
+    display: none;
+    
+}
+.dropdown01 li{
+    border: none;
+    height: 30px;
+    width: 100px;
+    text-transform: capitalize;
+    gap: 0;
+    color: hsl(0, 0%, 41%);
+    font-size: 0.89em;
+}
+
+.dropdown01.show{
+    display: block;
+}
+.dropdown02{
+    box-shadow: 0 5px 8px hsl(0, 1%, 30%);
+    border-radius: 8px;
+    position: relative;
+    top: 80px;
+    right: 85px;
+    display: none;
+}
+.dropdown02 li{
+    border: none;
+    height: 30px;
+    width: 100px;
+    text-transform: capitalize;
+}
+.dropdown02.show{
+    display: block;
+}
+li:hover{
+    color: hsl(0, 0%, 8%);
+}
+
+.link-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.link-btn a{
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+}
+.link-btn a:hover{
+    color: hsl(0, 0%, 8%);
+}
+.link-btn button{
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.link-btn button:hover{
+    border: 1px solid black;
+}
+.mobile-toggle{
+    display: none;
+}
+.hero{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px;
+}
+.remote{
+    /* border: 1px solid black; */
+    margin-left: 20px;
+    width: 400px;
+}
+.remote h1{
+    font-weight: bolder;
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+.remote p{
+    color: hsl(0, 0%, 41%);
+    margin-bottom: 55px;
+}
+.remote button{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-weight: 900;
+    font-size: 1em;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.brands{
+    margin-top: 45px;
+    margin-bottom: 10px;
+}
+.desktopview img{
+    width: 400px;
+}
+.mobile-veiw img{
+    display: none;
+}
+.remote-mobile{
+    display: none;
+}
+@media screen and (max-width:375px) {
+    .header{
+        display: flex;
+        justify-content: space-between;
+        background-color: hsl(0, 0%, 98%);
+        height: 80px;
+    }
+    .navbar-container{
+        display: none;
+        width: 250px;
+        height: 800px;
+        border: none;
+        background-color: hsl(0, 0%, 98%);
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+
+    }
+    .navbar-container.active{
+        display: block;
+    }
+    .navbar-menu{
+        display: block;
+        margin-top: 50px;
+    }
+    .navbar-menu li{
+        align-items: start;
+        
+        
+    }
+    .link-btn{
+        display: block;
+        text-align: center;
+        
+    }
+    .link-btn button{
+        margin-top: 15px;
+        width: 80%;
+        border: 1px solid black;
+    }
+    .dropdown01{
+        top: 30px;
+        margin-left: 25px;
+        box-shadow: none;
+        
+    }
+    .dropdown01.active{
+        display: block;
+        height: 30px;
+    }
+    .dropdown01.increase{
+        height: 135px;
+    }
+    .navbar-menu li.check{
+        height: 190px;
+    }
+    #check.check{
+        height: 190px;
+    }
+    .dropdown02{
+        top: 30px;
+        margin-left: 25px;
+        box-shadow: none;
+    }
+    .mobile-toggle{
+        display: block;
+        cursor: pointer;
+        z-index: 30;
+        
+    }
+    .menu{
+        
+        position: relative;
+        /* top: 0; */
+        right: 0;
+        z-index: 50;
+    }
+    .menu.active{
+        display: none;
+        
+    }
+    .close-menu{
+        display: none;
+        z-index: 99;
+    }
+    
+    .close-menu.show{
+        display: block;
+        z-index: 999;
+    }
+    .remote{
+        display: none;
+    }
+    .desktopview img{
+        display: none;
+    }
+    .hero{
+        margin: 0;
+        display: block;
+    }
+    .mobile-veiw img{
+        display: block;
+        width: 375px;
+        height: 300px;
+    }
+    .remote-mobile{
+        display: block;
+        text-align: center;
+    }
+    .remote-mobile h1{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-weight: 900;
+        font-size: 2em;
+    }
+    .remote-mobile p{
+        margin-bottom: 10px;
+        color: hsl(0, 0%, 41%);
+    }
+    .remote-mobile button{
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        font-weight: 900;
+        font-size: 1em;
+    }
+    .brands{
+        margin-bottom: 10px;
+    }
+}
